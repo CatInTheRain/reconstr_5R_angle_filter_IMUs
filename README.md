@@ -16,7 +16,7 @@ Potentiometers measurements will test the precision of the IMU algorithm to esti
 Data must be time signed and it must be read on Simulink to be stored and analyzed. The next step is a signal processing to increase accuracy and eliminate unwanted offsets from sensors. Then the algorithm implemented on Simulink
 will be embedded on the microcontroller. The final results of the two sensor systems will be displayed on Simulink, while the code for sensors reading and the motion tracking algorithm are executed on the microcontroller.
 
-# Motion Tracking Algorithm
+## Motion Tracking Algorithm
 A basic method for the reconstruction of an arbitrary kinematic chain is described below. The Figure 41 briefly represents the reconstruction method that it consists of two parts: the first is filltration of gravitation and magnetic
 field measurements by a Kalman fillter; the second is the TRIAD algorithm for estimation of the rotation matrix, respect to a reference system.
 ![schema](https://github.com/CatInTheRain/reconstr_5R_angle_filter_IMUs/assets/55113554/1e09cfb6-471b-4cc5-8b84-b88f1cf8e053)
@@ -27,3 +27,7 @@ Kalman filter applied on the time-variant dynamic model can rejecti linear accel
 
 The complete report and code are available and can be requested in private.
 
+## Bibliography
+- [1] A. Filippeschi, N. Schmitz, M. Miezal, G. Bleser, E. Ruffaldi, and D. Stricker, "Survey of motion tracking methods based on inertial sensors: A focus on upper limb human motion," Sensors, vol. 17, no. 6, p. 1257, 2017.
+- [2] R. Zhu and Z. Zhou, "A real-time articulated human motion tracking using tri-axis inertial/magnetic sensors package," IEEE Transactions on Neural systems and rehabilitation engineering, vol. 12, no. 2, pp. 295-302, 2004.
+- [3] M. D. Shuster and S. D. Oh, "Three-axis attitude determination from vector observations," Journal of guidance and Control, vol. 4, no. 1, pp. 70-77, 1981.
